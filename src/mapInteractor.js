@@ -645,6 +645,13 @@ var mapInteractor = function (args) {
   };
 
   /**
+   * Retrigger a mouse movement with the current mouse state.
+   */
+  this.retriggerMouseMove = function () {
+    m_this.map().geoTrigger(geo_event.mousemove, m_this.mouse());
+  };
+
+  /**
    * Connects events to a map.  If the map is not set, then this does nothing.
    * @returns {this}
    */
